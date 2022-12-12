@@ -1,0 +1,21 @@
+Réunion : 10/12/2022 (21:15 21:50) 
+
+Délai : 10/12/2022 --> 31/12/2022
+Rapport :
+	Analyse et conception  (18/12/2022)
+		- UML 
+			- Diagramme de contexte (Achraf)
+			- Diagramme de classe (Abdelamlek)
+			- Diagramme de cas d'utilisation (Achraf)
+			- Diagramme de séquences (Abdelmalek)
+			- Diagrammes de Composant et de Déploiement (Achraf) (Abdelmalek)
+		- Merise
+			- Model logique de données (Abdelmalek)
+		- Cycle de vie du logiciel
+			- Modèle en V (Achraf)
+			- SCRUM (Achraf)
+			- GANTT (A rendre)
+	Réalisation (18/12/2022 --> 31/12/2022)
+		- JAVA FX
+		- ....
+		
