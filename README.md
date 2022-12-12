@@ -9,18 +9,19 @@ gérer les projets d’une entreprise. Cette application va permettre de gérer 
 - Cette application va avoir deux types d’utilisateurs :
 
 ## Responsable de projet :
-  ✓ Gérer ses informations personnelles.
-  ✓ Ajouter, modifier ou supprimer les comptes utilisateurs
-  ✓ Ajouter, modifier ou supprimer une tâche.
-  ✓ Affecter des ressources humaines (intervenant) et matérielles à un tâche.
-  ✓ Planifier et visualiser dans un diagramme de Gantt les tâches du projet.
-  ✓ Importer et exporter toutes les données de l'application.
 
-## Intervenant
+  ###  Gérer ses informations personnelles.
+  ###  Ajouter, modifier ou supprimer les comptes utilisateurs
+  ###  Ajouter, modifier ou supprimer une tâche.
+  ###  Affecter des ressources humaines (intervenant) et matérielles à un tâche.
+  ###  Planifier et visualiser dans un diagramme de Gantt les tâches du projet.
+  ###  Importer et exporter toutes les données de l'application.
 
-  ✓ Gérer ses informations personnelles.
-  ✓ Afficher ses ordres de travail.
-  ✓ Modifier l’état d’une tâche.
-  ✓ Recevoir une notification (Email et SMS).
+## Intervenant :
+
+  ###  Gérer ses informations personnelles.
+  ###  Afficher ses ordres de travail.
+  ###  Modifier l’état d’une tâche.
+  ###  Recevoir une notification (Email et SMS).
 
 
