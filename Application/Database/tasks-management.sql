@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : sam. 24 déc. 2022 à 16:19
+-- Généré le : sam. 24 déc. 2022 à 18:05
 -- Version du serveur : 10.4.27-MariaDB
 -- Version de PHP : 8.1.12
 
@@ -137,7 +137,8 @@ CREATE TABLE `user` (
   `CIN` varchar(50) NOT NULL,
   `TEL` varchar(50) NOT NULL,
   `isResponsable` tinyint(1) NOT NULL DEFAULT 0,
-  `isIntervenent` tinyint(1) NOT NULL DEFAULT 0
+  `isIntervenent` tinyint(1) NOT NULL DEFAULT 0,
+  `COMPTE_ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -203,7 +204,8 @@ ALTER TABLE `task`
 -- Index pour la table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `user_FK_1` (`COMPTE_ID`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
@@ -303,6 +305,12 @@ ALTER TABLE `projet`
 --
 ALTER TABLE `task`
   ADD CONSTRAINT `task_FK_1` FOREIGN KEY (`PROJET_ID`) REFERENCES `task` (`ID`);
+
+--
+-- Contraintes pour la table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_FK_1` FOREIGN KEY (`COMPTE_ID`) REFERENCES `compte` (`ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
