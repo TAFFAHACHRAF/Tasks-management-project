@@ -1,20 +1,25 @@
 package project.tasks_management.dao.entities;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Notification {
+public class Notification implements Serializable {
     private long ID=0;
     private String TITLE="";
     private Date DATE=new Date();
     private String DESCRIPTION="";
+    private Task TASK=new Task();
+    private Intervenent INTERVENENT=new Intervenent();
 
     public Notification() {}
 
-    public Notification(long ID, String TITLE, Date DATE, String DESCRIPTION) {
+    public Notification(long ID, String TITLE, Date DATE, String DESCRIPTION,Task TASK,Intervenent INTERVENENT) {
         this.ID = ID;
         this.TITLE = TITLE;
         this.DATE = DATE;
         this.DESCRIPTION = DESCRIPTION;
+        this.TASK=TASK;
+        this.INTERVENENT=INTERVENENT;
     }
 
     public long getID() {

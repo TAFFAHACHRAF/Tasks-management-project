@@ -1,9 +1,10 @@
 package project.tasks_management.dao.entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Responsable extends User {
+public class Responsable extends User implements Serializable {
     List<Projet> PROJETS=new ArrayList<>();
     List<Materiel> MATERIELS=new ArrayList<>();
 

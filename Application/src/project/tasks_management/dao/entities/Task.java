@@ -1,10 +1,11 @@
 package project.tasks_management.dao.entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Task {
+public class Task implements Serializable {
     private long ID=0;
     private String DESCRIPTION="";
     private Date DATE_DEBUT=new Date();
@@ -14,8 +15,11 @@ public class Task {
     private List<OrderDeTravail> ORDERS_DE_TRAVAIL=new ArrayList<>();
     private List<Notification> NOTIFICATIONS=new ArrayList<>();
     private List<User> INTERVENTS=new ArrayList<>();
+    private Projet PROJET=new Projet();
 
-    public Task(long ID, String DESCRIPTION, Date DATE_DEBUT, Date DATE_FIN, String TITLE, List<Materiel> MATERIELS, List<OrderDeTravail> ORDERS_DE_TRAVAIL, List<Notification> NOTIFICATIONS, List<User> INTERVENTS) {
+    public Task () {}
+
+    public Task(long ID, String DESCRIPTION, Date DATE_DEBUT, Date DATE_FIN, String TITLE, List<Materiel> MATERIELS, List<OrderDeTravail> ORDERS_DE_TRAVAIL, List<Notification> NOTIFICATIONS, List<User> INTERVENTS,Projet PROJET) {
         this.ID = ID;
         this.DESCRIPTION = DESCRIPTION;
         this.DATE_DEBUT = DATE_DEBUT;
@@ -25,6 +29,7 @@ public class Task {
         this.ORDERS_DE_TRAVAIL = ORDERS_DE_TRAVAIL;
         this.NOTIFICATIONS = NOTIFICATIONS;
         this.INTERVENTS = INTERVENTS;
+        this.PROJET=PROJET;
     }
 
     public long getID() {

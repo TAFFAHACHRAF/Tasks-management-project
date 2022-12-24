@@ -1,9 +1,10 @@
 package project.tasks_management.dao.entities;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Intervenent extends User {
+public class Intervenent extends User implements Serializable {
     List<Task> TASKS=new ArrayList<>();
 
     public Intervenent(){

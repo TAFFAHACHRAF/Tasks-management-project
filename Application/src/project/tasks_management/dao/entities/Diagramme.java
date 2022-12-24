@@ -1,6 +1,8 @@
 package project.tasks_management.dao.entities;
 
-public class Diagramme {
+import java.io.Serializable;
+
+public class Diagramme implements Serializable {
     private long ID=0;
     private String TYPE="";
     private Projet PROJET=new Projet();

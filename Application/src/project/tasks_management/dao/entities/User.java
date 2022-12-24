@@ -1,6 +1,8 @@
 package project.tasks_management.dao.entities;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private long ID=0;
     private String NOM="";
     private String PRENOM="";
