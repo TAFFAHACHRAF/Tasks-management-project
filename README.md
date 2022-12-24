@@ -21,5 +21,3 @@ L’objectif de ce projet est le développement d’une application en JAVA pour
     2) Afficher ses ordres de travail.
     3) Modifier l’état d’une tâche.
     4) Recevoir une notification (Email et SMS).
-
-
