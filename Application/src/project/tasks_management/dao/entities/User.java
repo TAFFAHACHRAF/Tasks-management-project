@@ -65,19 +65,19 @@ public class User implements Serializable {
         this.TEL = TEL;
     }
 
-    public boolean isResponsable() {
+    public boolean getIsResponsable() {
         return isResponsable;
     }
 
-    public void setResponsable(boolean responsable) {
+    public void setIsResponsable(boolean responsable) {
         isResponsable = responsable;
     }
 
-    public boolean isIntervenent() {
+    public boolean getIsIntervenent() {
         return isIntervenent;
     }
 
-    public void setIntervenent(boolean intervenent) {
+    public void setIsIntervenent(boolean intervenent) {
         isIntervenent = intervenent;
     }
 

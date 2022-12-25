@@ -7,7 +7,7 @@ public class SingletonConnexionDB {
     static {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/tasks-management","root","");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/task_management","root","");
         } catch (ClassNotFoundException | SQLException e){
             e.printStackTrace();
         }

@@ -15,4 +15,12 @@ public class Intervenent extends User implements Serializable {
         super(ID, NOM, PRENOM, CIN, TEL,COMPTE, false, true);
         this.TASKS=TASKS;
     }
+
+    public List<Task> getTASKS() {
+        return TASKS;
+    }
+
+    public void setTASKS(List<Task> TASKS) {
+        this.TASKS = TASKS;
+    }
 }
