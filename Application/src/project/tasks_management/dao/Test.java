@@ -1,12 +1,11 @@
 package project.tasks_management.dao;
 
-import project.tasks_management.dao.entities.Compte;
-import project.tasks_management.dao.entities.Intervenent;
-import project.tasks_management.dao.entities.User;
+import project.tasks_management.entities.Intervenent;
+import project.tasks_management.dao.intervenent.IntervenentDmpl;
 
 public class Test {
     public static void main(String args[]){
-        IntervenentImpl inter=new IntervenentImpl();
+        IntervenentDmpl inter=new IntervenentDmpl();
         Intervenent i=new Intervenent();
         i.setNOM("iuzehfuehfiuzef");
         i.getCOMPTE().setPASSWORD("pozefozjefpojzefioj");
