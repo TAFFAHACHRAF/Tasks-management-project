@@ -43,18 +43,18 @@ public class IntervenentDmpl implements IntervenentDAO {
     @Override
     public Intervenent findOne(int id) {
         Intervenent i=new Intervenent();
-        PreparedStatement pstm=null;
-        ResultSet rs=null;
+        Connection connection=new SingletonConnexionDB().getConnexion();
         try {
-            pstm=conn.prepareStatement("select * from user where isIntervenent=true and ID=?");
+            PreparedStatement pstm=connection.prepareStatement("select * from user where isIntervenent=true and ID=?");
             pstm.setInt(1,id);
-            rs=pstm.executeQuery();
+            ResultSet rs=pstm.executeQuery();
             if(rs.next()){
                 i.setID(rs.getInt("ID"));
                 i.setNOM(rs.getString("NOM"));
                 i.setPRENOM(rs.getString("PRENOM"));
                 i.setTEL(rs.getString("TEL"));
-                i.getCOMPTE().setID(rs.getInt("COMPTE_ID"));
+                CompteDmpl cdmp=new CompteDmpl();
+                i.setCOMPTE(cdmp.findOne(rs.getInt("COMPTE_ID")));
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -64,13 +64,14 @@ public class IntervenentDmpl implements IntervenentDAO {
 
     @Override
     public Intervenent save(Intervenent i) {
+        Connection connection=new SingletonConnexionDB().getConnexion();
         PreparedStatement pstm=null;
         CompteDmpl cimpl=new CompteDmpl();
         try {
             Compte c=cimpl.save(i.getCOMPTE());
             long COMPTE_ID=cimpl.getCompteByEmailAndPassword(c.getEMAIL(),c.getPASSWORD()).getID();
 
-            pstm=conn.prepareStatement("insert into user (NOM,PRENOM,CIN,TEL,isResponsable,isIntervenent,COMPTE_ID) values (?,?,?,?,?,?,?)");
+            pstm=connection.prepareStatement("insert into user (NOM,PRENOM,CIN,TEL,isResponsable,isIntervenent,COMPTE_ID) values (?,?,?,?,?,?,?)");
             pstm.setString(1,i.getNOM());
             pstm.setString(2,i.getPRENOM());
             pstm.setString(3,i.getCIN());
@@ -87,12 +88,33 @@ public class IntervenentDmpl implements IntervenentDAO {
 
     @Override
     public boolean delete(Intervenent i) {
-        return false;
+        Connection connection=new SingletonConnexionDB().getConnexion();
+        try {
+            PreparedStatement pstm=connection.prepareStatement("delete user where ID=?");
+            pstm.setLong(1,i.getID());
+            pstm.executeUpdate();
+        }catch (SQLException e){
+            return false;
+        }
+        return true;
     }
 
     @Override
     public Intervenent update(Intervenent i) {
-        return null;
+        Connection connection=new SingletonConnexionDB().getConnexion();
+        try {
+            PreparedStatement pstm=connection.prepareStatement("update user set NOM=?,PRENOM=?,CIN=?,TEL=? where ID=? and isIntervenent=?");
+            pstm.setString(1,i.getNOM());
+            pstm.setString(2,i.getPRENOM());
+            pstm.setString(3,i.getCIN());
+            pstm.setString(4,i.getTEL());
+            pstm.setLong(5,i.getID());
+            pstm.setBoolean(5,i.getIsResponsable());
+            pstm.executeUpdate();
+        }catch (SQLException e){
+            return null;
+        }
+        return i;
     }
 
 }

@@ -111,8 +111,8 @@ public class TaskDmpl implements TaskDAO {
         return t;
     }
 
-    public List<Task> getTasksByResponsable(int responsable_id) throws SQLException {
-        String sql = "SELECT * FROM tasks WHERE RESPONSABLE_ID = ?";
+    public List<Task> getTasksByResponsable(int responsable_id) {
+        /*String sql = "SELECT * FROM tasks WHERE RESPONSABLE_ID = ?";
         PreparedStatement statement = conn.prepareStatement(sql);
         statement.setLong(1, responsable_id);
         ResultSet resultSet = statement.executeQuery();
@@ -132,6 +132,7 @@ public class TaskDmpl implements TaskDAO {
             return task;
         }
 
-        return  task;
+        return  task;*/
+        return null;
     }
 }

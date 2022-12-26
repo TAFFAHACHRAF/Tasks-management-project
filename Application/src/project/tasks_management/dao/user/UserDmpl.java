@@ -1,4 +1,4 @@
-package project.tasks_management.dao.user;
+/*package project.tasks_management.dao.user;
 
 import project.tasks_management.dao.SingletonConnexionDB;
 import project.tasks_management.entities.Compte;
@@ -99,4 +99,4 @@ public class UserDmpl implements UserDAO {
         return true;
     }
 
-}
+}*/

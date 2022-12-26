@@ -1,9 +1,10 @@
-package project.tasks_management.dao.intervenent;
+package project.tasks_management.dao.Responsable;
 
 import project.tasks_management.dao.SingletonConnexionDB;
 import project.tasks_management.dao.compte.CompteDmpl;
+import project.tasks_management.dao.responsable.ResponsableDAO;
 import project.tasks_management.entities.Compte;
-import project.tasks_management.entities.Intervenent;
+import project.tasks_management.entities.Responsable;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,7 +13,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ResponsableDmpl implements IntervenentDAO {
+public class ResponsableDmpl implements ResponsableDAO {
     private Connection conn;
 
     public void AccountDao(SingletonConnexionDB conn) {
@@ -21,40 +22,40 @@ public class ResponsableDmpl implements IntervenentDAO {
 
     @Override
     public List findAll() {
-        List<Intervenent> intervenents = new ArrayList<>();
+        List<Responsable> Responsables = new ArrayList<>();
         try {
             PreparedStatement pstm=conn.prepareStatement("select * from user where isResponsable=true");
             ResultSet rs=pstm.executeQuery();
             while (rs.next()){
-                Intervenent i=new Intervenent();
+                Responsable i=new Responsable();
                 i.setID(rs.getInt("ID"));
                 i.setNOM(rs.getString("NOM"));
                 i.setPRENOM(rs.getString("PRENOM"));
                 i.setTEL(rs.getString("TEL"));
                 i.getCOMPTE().setID(rs.getInt("COMPTE_ID"));
-                intervenents.add(i);
+                Responsables.add(i);
             }
         }catch (SQLException e){
             return null;
         }
-        return intervenents;
+        return Responsables;
     }
 
     @Override
-    public Intervenent findOne(int id) {
-        Intervenent i=new Intervenent();
-        PreparedStatement pstm=null;
-        ResultSet rs=null;
+    public Responsable findOne(int id) {
+        Responsable i=new Responsable();
+        Connection connection=new SingletonConnexionDB().getConnexion();
         try {
-            pstm=conn.prepareStatement("select * from user where isResponsable=true and ID=?");
+            PreparedStatement pstm=connection.prepareStatement("select * from user where isResponsable=true and ID=?");
             pstm.setInt(1,id);
-            rs=pstm.executeQuery();
+            ResultSet rs=pstm.executeQuery();
             if(rs.next()){
                 i.setID(rs.getInt("ID"));
                 i.setNOM(rs.getString("NOM"));
                 i.setPRENOM(rs.getString("PRENOM"));
                 i.setTEL(rs.getString("TEL"));
-                i.getCOMPTE().setID(rs.getInt("COMPTE_ID"));
+                CompteDmpl cdmp=new CompteDmpl();
+                i.setCOMPTE(cdmp.findOne(rs.getInt("COMPTE_ID")));
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -63,20 +64,21 @@ public class ResponsableDmpl implements IntervenentDAO {
     }
 
     @Override
-    public Intervenent save(Intervenent i) {
+    public Responsable save(Responsable i) {
+        Connection connection=new SingletonConnexionDB().getConnexion();
         PreparedStatement pstm=null;
         CompteDmpl cimpl=new CompteDmpl();
         try {
             Compte c=cimpl.save(i.getCOMPTE());
             long COMPTE_ID=cimpl.getCompteByEmailAndPassword(c.getEMAIL(),c.getPASSWORD()).getID();
 
-            pstm=conn.prepareStatement("insert into user (NOM,PRENOM,CIN,TEL,isResponsable,isIntervenent,COMPTE_ID) values (?,?,?,?,?,?,?)");
+            pstm=connection.prepareStatement("insert into user (NOM,PRENOM,CIN,TEL,isResponsable,isResponsable,COMPTE_ID) values (?,?,?,?,?,?,?)");
             pstm.setString(1,i.getNOM());
             pstm.setString(2,i.getPRENOM());
             pstm.setString(3,i.getCIN());
             pstm.setString(4,i.getTEL());
             pstm.setBoolean(5,i.getIsResponsable());
-            pstm.setBoolean(6,i.getIsIntervenent());
+            pstm.setBoolean(6,i.getIsResponsable());
             pstm.setLong(7, COMPTE_ID);
             pstm.executeUpdate();
         }catch (SQLException e){
@@ -86,13 +88,33 @@ public class ResponsableDmpl implements IntervenentDAO {
     }
 
     @Override
-    public boolean delete(Intervenent i) {
-        return false;
+    public boolean delete(Responsable i) {
+        Connection connection=new SingletonConnexionDB().getConnexion();
+        try {
+            PreparedStatement pstm=connection.prepareStatement("delete user where ID=?");
+            pstm.setLong(1,i.getID());
+            pstm.executeUpdate();
+        }catch (SQLException e){
+            return false;
+        }
+        return true;
     }
 
     @Override
-    public Intervenent update(Intervenent i) {
-        return null;
+    public Responsable update(Responsable i) {
+        Connection connection=new SingletonConnexionDB().getConnexion();
+        try {
+            PreparedStatement pstm=connection.prepareStatement("update user set NOM=?,PRENOM=?,CIN=?,TEL=? where ID=? and isResponsable=?");
+            pstm.setString(1,i.getNOM());
+            pstm.setString(2,i.getPRENOM());
+            pstm.setString(3,i.getCIN());
+            pstm.setString(4,i.getTEL());
+            pstm.setLong(5,i.getID());
+            pstm.setBoolean(5,i.getIsResponsable());
+            pstm.executeUpdate();
+        }catch (SQLException e){
+            return null;
+        }
+        return i;
     }
-
 }

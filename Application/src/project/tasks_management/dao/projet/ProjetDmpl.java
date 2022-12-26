@@ -4,6 +4,7 @@ import project.tasks_management.dao.SingletonConnexionDB;
 import project.tasks_management.entities.Projet;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProjetDmpl implements ProjetDAO {
@@ -16,18 +17,16 @@ public class ProjetDmpl implements ProjetDAO {
     @Override
     public Projet findOne(int id) throws SQLException {
         Projet projet = new Projet();
-        PreparedStatement stmt1 = null;
-        PreparedStatement stmt2 = null;
-        ResultSet rs1 = null;
-        ResultSet rs2 = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
         try {
-            stmt1 = conn.prepareStatement("SELECT * FROM projets WHERE id = ?");
-            stmt1.setLong(1, id);
-            rs1 = stmt1.executeQuery();
-            if (rs1.next()) {
-                projet.setID(rs1.getInt("ID"));
+            stmt = conn.prepareStatement("SELECT * FROM projets WHERE id = ?");
+            stmt.setLong(1, id);
+            rs = stmt.executeQuery();
+            if (rs.next()) {
+                projet.setID(rs.getInt("ID"));
                 projet.setTITLE("TITLE");
-                projet.setDate(rs1.getDate("DATE_DEBUT"));
+                projet.setDate(rs.getDate("DATE_DEBUT"));
 
             }
         } catch (SQLException e) {
@@ -46,7 +45,7 @@ public class ProjetDmpl implements ProjetDAO {
     @Override
     public List<Projet> findAll() throws SQLException {
         List<Projet> projets = new ArrayList<>();
-        Statement stmt = null;
+        /*Statement stmt = null;
         ResultSet rs = null;
         try {
             stmt = conn.createStatement();
@@ -70,7 +69,7 @@ public class ProjetDmpl implements ProjetDAO {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        }
+        }*/
         return projets;
     }
 
@@ -81,9 +80,9 @@ public class ProjetDmpl implements ProjetDAO {
             stmt = conn.prepareStatement("INSERT INTO projets (id, title, date, diagrammes, tasks, responsable) VALUES (?, ?, ?, ?, ?, ?)");
             stmt.setLong(1, p.getID());
             stmt.setString(2, p.getTITLE());
-            stmt.setDate(3, p.getDate());
-            stmt.setList(4, p.getDIAGRAMMES());
-            stmt.setList(5, p.getTASKS());
+            stmt.setDate(3, (Date) p.getDate());
+            /*stmt.setList(4, p.getDIAGRAMMES());
+            stmt.setList(5, p.getTASKS());*/
             stmt.setObject(6, p.getRESPONSABLE());
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -126,9 +125,9 @@ public class ProjetDmpl implements ProjetDAO {
         try {
             stmt = conn.prepareStatement("UPDATE projets SET title = ?, date = ?, diagrammes = ?, tasks = ?, responsable = ? WHERE id = ?");
             stmt.setString(1, p.getTITLE());
-            stmt.setDate(2, p.getDate());
-            stmt.setList(3, p.getDIAGRAMMES());
-            stmt.setList(4, p.getTASKS());
+            stmt.setDate(2, (Date) p.getDate());
+           /* stmt.setList(3, p.getDIAGRAMMES());
+            stmt.setList(4, p.getTASKS());*/
             stmt.setObject(5, p.getRESPONSABLE());
             stmt.setLong(6, p.getID());
             stmt.executeUpdate();
@@ -142,6 +141,6 @@ public class ProjetDmpl implements ProjetDAO {
             }
         }
 
-        return o;
+        return p;
     }
 }
