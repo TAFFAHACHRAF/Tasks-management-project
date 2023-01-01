@@ -63,3 +63,12 @@ L’objectif de ce projet est le développement d’une application en JAVA pour
                 ├───responsable
                 └───task
 ```
+
+Ce projet a été réalisé par deux éléves ingénieurs en génie du logiciel et des systèmes informatique distribué :
+``` bash
+Nom                          
+----               
+-achraf-        
+-abdelmalek-    
+```
+
