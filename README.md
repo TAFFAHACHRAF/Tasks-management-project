@@ -22,7 +22,7 @@ L’objectif de ce projet est le développement d’une application en JAVA pour
     3) Modifier l’état d’une tâche.
     4) Recevoir une notification (Email et SMS).
     
-bash ```
+ ``` bash
 ├───.idea
 ├───out
 │   └───production
