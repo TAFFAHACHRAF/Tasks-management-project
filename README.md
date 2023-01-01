@@ -1,5 +1,5 @@
 
-#  Développement d'une application en Java de gestion et de planification des projets.
+#  Application de gestion et de planification des projets.
 
 
 L’objectif de ce projet est le développement d’une application en JAVA pour gérer les projets d’une entreprise. Cette application va permettre de gérer les tâches du projets,les ressources, et affiche la planification dans un diagramme de Gantt.
@@ -22,6 +22,8 @@ L’objectif de ce projet est le développement d’une application en JAVA pour
     3) Modifier l’état d’une tâche.
     4) Recevoir une notification (Email et SMS).
     
+    
+### La structure du projet
  ``` bash
 ├───.idea
 ├───out
