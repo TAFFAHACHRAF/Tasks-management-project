@@ -32,18 +32,18 @@ public class IntervenantDmpl implements IntervenantDAO {
                 i.setPASSWORD(rs.getString("PASSWORD"));
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByIntervenant(i) != null) {
                     List<Notification> ns = n.getNotificationByIntervenant(i);
                     i.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTasksByIntervenant(i) != null){
                     List<Task> ts=t.getTasksByIntervenant(i);
                     i.setTASK(ts);
-                }
+                }*/
 
                 Intervenants.add(i);
             }
@@ -70,18 +70,18 @@ public class IntervenantDmpl implements IntervenantDAO {
                 i.setPASSWORD(rs.getString("PASSWORD"));
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByIntervenant(i) != null) {
                     List<Notification> ns = n.getNotificationByIntervenant(i);
                     i.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTasksByIntervenant(i) != null){
                     List<Task> ts=t.getTasksByIntervenant(i);
                     i.setTASK(ts);
-                }
+                }*/
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -157,18 +157,18 @@ public class IntervenantDmpl implements IntervenantDAO {
                 i.setPASSWORD(rs.getString("PASSWORD"));
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByIntervenant(i) != null) {
                     List<Notification> ns = n.getNotificationByIntervenant(i);
                     i.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl tt=new TaskDmpl();
+                /*TaskDmpl tt=new TaskDmpl();
                 if(tt.getTasksByIntervenant(i) != null){
                     List<Task> ts=tt.getTasksByIntervenant(i);
                     i.setTASK(ts);
-                }
+                }*/
 
                 Intervenants.add(i);
             }

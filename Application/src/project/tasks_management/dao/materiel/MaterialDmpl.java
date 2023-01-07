@@ -29,18 +29,18 @@ public class MaterialDmpl implements MaterialDAO {
                 m.setNOM(rs.getString("NOM"));
 
                 // affecter responsable
-                ResponsableDmpl r=new ResponsableDmpl();
+                /*ResponsableDmpl r=new ResponsableDmpl();
                 if(r.getResponsablesByMateriel(m) != null) {
                     Responsable rrs = r.getResponsablesByMateriel(m);
                     m.setRESPONSABLE(rrs);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTasksByMateriel(m) != null) {
                     List<Task> ts = t.getTasksByMateriel(m);
                     m.setTASK(ts);
-                }
+                }*/
 
                 Materiels.add(m);
             }
@@ -64,18 +64,18 @@ public class MaterialDmpl implements MaterialDAO {
                 m.setNOM(rs.getString("NOM"));
 
                 // affecter responsable
-                ResponsableDmpl r=new ResponsableDmpl();
+                /*ResponsableDmpl r=new ResponsableDmpl();
                 if(r.getResponsablesByMateriel(m) != null) {
                     Responsable rrs = r.getResponsablesByMateriel(m);
                     m.setRESPONSABLE(rrs);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTasksByMateriel(m) != null) {
                     List<Task> ts = t.getTasksByMateriel(m);
                     m.setTASK(ts);
-                }
+                }*/
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -144,18 +144,18 @@ public class MaterialDmpl implements MaterialDAO {
                 m.setNOM(rs.getString("NOM"));
 
                 // affecter responsable
-                ResponsableDmpl rr=new ResponsableDmpl();
+                /*ResponsableDmpl rr=new ResponsableDmpl();
                 if(rr.getResponsablesByMateriel(m) != null) {
                     Responsable rrs = rr.getResponsablesByMateriel(m);
                     m.setRESPONSABLE(rrs);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTasksByMateriel(m) != null) {
                     List<Task> ts = t.getTasksByMateriel(m);
                     m.setTASK(ts);
-                }
+                }*/
 
                 Materiels.add(m);
             }
@@ -180,18 +180,18 @@ public class MaterialDmpl implements MaterialDAO {
                 m.setNOM(rs.getString("NOM"));
 
                 // affecter responsable
-                ResponsableDmpl r=new ResponsableDmpl();
+                /*ResponsableDmpl r=new ResponsableDmpl();
                 if(r.getResponsablesByMateriel(m)!=null) {
                     Responsable rrs = r.getResponsablesByMateriel(m);
                     m.setRESPONSABLE(rrs);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl tt=new TaskDmpl();
+                /*TaskDmpl tt=new TaskDmpl();
                 if(tt.getTasksByMateriel(m)!=null) {
                     List<Task> ts = tt.getTasksByMateriel(m);
                     m.setTASK(ts);
-                }
+                }*/
 
                 Materiels.add(m);
             }

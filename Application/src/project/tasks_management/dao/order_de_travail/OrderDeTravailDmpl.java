@@ -27,11 +27,11 @@ public class OrderDeTravailDmpl implements OrderDeTravailDAO {
                 o.setDESCRIPTION(rs.getString("DESCRIPTION"));
 
                 // affecter task
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTaskByOrderDeTravail(o) != null) {
                     Task tt = t.getTaskByOrderDeTravail(o);
                     o.setTask(tt);
-                }
+                }*/
 
                 orders.add(o);
             }
@@ -55,11 +55,11 @@ public class OrderDeTravailDmpl implements OrderDeTravailDAO {
                 o.setDESCRIPTION(rs.getString("DESCRIPTION"));
 
                 // affecter task
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTaskByOrderDeTravail(o)!=null) {
                     Task tt = t.getTaskByOrderDeTravail(o);
                     o.setTask(tt);
-                }
+                }*/
             }
         }catch (SQLException e){
             e.printStackTrace();

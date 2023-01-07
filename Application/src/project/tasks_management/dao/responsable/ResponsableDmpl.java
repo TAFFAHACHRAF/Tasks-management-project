@@ -137,7 +137,7 @@ public class ResponsableDmpl implements ResponsableDAO {
         Responsable r=new Responsable();
         try {
             Connection connection=new SingletonConnexionDB().getConnexion();
-            PreparedStatement pstm=connection.prepareStatement("select r.ID,r.NOM,r.PRENOM,r.CIN,r.TEL,r.EMAIL,r.PASSWORD from user r,projet p where r.isResponsable=true and r.ID=p.RESPONSABLE_ID and p.RESPONSABLE_ID=?");
+            PreparedStatement pstm=connection.prepareStatement("select r.ID,r.NOM,r.PRENOM,r.CIN,r.TEL,r.EMAIL,r.PASSWORD from user r,projet p where r.isResponsable=1 and r.ID=p.RESPONSABLE_ID and p.ID=?");
             pstm.setLong(1,p.getID());
             ResultSet rs=pstm.executeQuery();
             if (rs.next()){

@@ -24,18 +24,18 @@ public class ProjetDmpl implements ProjetDAO {
                 p.setDate(rs.getDate("DATE_DEBUT"));
 
                 // affecter responsable
-                ResponsableDmpl r=new ResponsableDmpl();
+                /*ResponsableDmpl r=new ResponsableDmpl();
                 if(r.getResponsablesByProjet(p)!=null) {
                     Responsable rr = r.getResponsablesByProjet(p);
                     p.setRESPONSABLE(rr);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTasksByProjet(p)!=null) {
                     List<Task> ts = t.getTasksByProjet(p);
                     p.setTASKS(ts);
-                }
+                }*/
 
                 Projets.add(p);
             }
@@ -59,18 +59,18 @@ public class ProjetDmpl implements ProjetDAO {
                 p.setDate(rs.getDate("DATE_DEBUT"));
 
                 // affecter responsable
-                ResponsableDmpl r=new ResponsableDmpl();
+                /*ResponsableDmpl r=new ResponsableDmpl();
                 if(r.getResponsablesByProjet(p)!=null) {
                     Responsable rr = r.getResponsablesByProjet(p);
                     p.setRESPONSABLE(rr);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTasksByProjet(p)!=null) {
                     List<Task> ts = t.getTasksByProjet(p);
                     p.setTASKS(ts);
-                }
+                }*/
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -138,18 +138,18 @@ public class ProjetDmpl implements ProjetDAO {
                 p.setDate(rs.getDate("DATE_DEBUT"));
 
                 // affecter responsable
-                ResponsableDmpl rr=new ResponsableDmpl();
+                /*ResponsableDmpl rr=new ResponsableDmpl();
                 if(rr.getResponsablesByProjet(p)!=null) {
                     Responsable rrr = rr.getResponsablesByProjet(p);
                     p.setRESPONSABLE(rrr);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl t=new TaskDmpl();
+                /*TaskDmpl t=new TaskDmpl();
                 if(t.getTasksByProjet(p)!=null) {
                     List<Task> ts = t.getTasksByProjet(p);
                     p.setTASKS(ts);
-                }
+                }*/
 
                 Projets.add(p);
             }
@@ -173,18 +173,18 @@ public class ProjetDmpl implements ProjetDAO {
                 p.setDate(rs.getDate("DATE_DEBUT"));
 
                 // affecter responsable
-                ResponsableDmpl r=new ResponsableDmpl();
+                /*ResponsableDmpl r=new ResponsableDmpl();
                 if(r.getResponsablesByProjet(p)!=null) {
                     Responsable rr = r.getResponsablesByProjet(p);
                     p.setRESPONSABLE(rr);
-                }
+                }*/
 
                 // affecter tasks
-                TaskDmpl tt=new TaskDmpl();
+                /*TaskDmpl tt=new TaskDmpl();
                 if(tt.getTasksByProjet(p)!=null) {
                     List<Task> ts = tt.getTasksByProjet(p);
                     p.setTASKS(ts);
-                }
+                }*/
             }
         }catch (SQLException e){
             e.printStackTrace();

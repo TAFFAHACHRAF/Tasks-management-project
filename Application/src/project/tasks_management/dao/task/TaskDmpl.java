@@ -31,39 +31,39 @@ public class TaskDmpl implements TaskDAO {
                 task.setTITLE(resultSet.getString("TITLE"));
 
                 // affecter projet
-                ProjetDmpl p=new ProjetDmpl();
+                /*ProjetDmpl p=new ProjetDmpl();
                 if(p.getProjetByTask(task)!=null) {
                     Projet pp = p.getProjetByTask(task);
                     task.setPROJET(pp);
-                }
+                }*/
 
                 // affecter materiels
-                MaterialDmpl m=new MaterialDmpl();
+                /*MaterialDmpl m=new MaterialDmpl();
                 if(m.getMaterielsByTask(task)!=null) {
                     List<Materiel> ms = m.getMaterielsByTask(task);
                     task.setMATERIEL(ms);
-                }
+                }*/
 
                 // affecter intervenants
-                IntervenantDAO i=new IntervenantDmpl();
+                /*IntervenantDAO i=new IntervenantDmpl();
                 if(i.getIntervenantsByTask(task)!=null) {
                     List<Intervenant> is = i.getIntervenantsByTask(task);
                     task.setINTERVENT(is);
-                }
+                }*/
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByTask(task)!=null) {
                     List<Notification> ns = n.getNotificationByTask(task);
                     task.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter orders_de_travail
-                OrderDeTravailDmpl o=new OrderDeTravailDmpl();
+                /*OrderDeTravailDmpl o=new OrderDeTravailDmpl();
                 if(o.getOrderDeTravailByTask(task)!=null) {
                     List<OrderDeTravail> os = o.getOrderDeTravailByTask(task);
                     task.setORDERS_DE_TRAVAIL(os);
-                }
+                }*/
 
                 tasks.add(task);
             }
@@ -90,39 +90,39 @@ public class TaskDmpl implements TaskDAO {
                 task.setTITLE(resultSet.getString("TITLE"));
 
                 // affecter projet
-                ProjetDmpl p=new ProjetDmpl();
+                /*ProjetDmpl p=new ProjetDmpl();
                 if(p.getProjetByTask(task)!=null) {
                     Projet pp = p.getProjetByTask(task);
                     task.setPROJET(pp);
-                }
+                }*/
 
                 // affecter materiels
-                MaterialDmpl m=new MaterialDmpl();
+                /*MaterialDmpl m=new MaterialDmpl();
                 if(m.getMaterielsByTask(task)!=null) {
                     List<Materiel> ms = m.getMaterielsByTask(task);
                     task.setMATERIEL(ms);
-                }
+                }*/
 
                 // affecter intervenants
-                IntervenantDAO i=new IntervenantDmpl();
+                /*IntervenantDAO i=new IntervenantDmpl();
                 if(i.getIntervenantsByTask(task)!=null) {
                     List<Intervenant> is = i.getIntervenantsByTask(task);
                     task.setINTERVENT(is);
-                }
+                }*/
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByTask(task)!=null) {
                     List<Notification> ns = n.getNotificationByTask(task);
                     task.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter orders_de_travail
-                OrderDeTravailDmpl o=new OrderDeTravailDmpl();
+                /*OrderDeTravailDmpl o=new OrderDeTravailDmpl();
                 if(o.getOrderDeTravailByTask(task)!=null) {
                     List<OrderDeTravail> os = o.getOrderDeTravailByTask(task);
                     task.setORDERS_DE_TRAVAIL(os);
-                }
+                }*/
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -194,39 +194,39 @@ public class TaskDmpl implements TaskDAO {
                 task.setTITLE(resultSet.getString("TITLE"));
 
                 // affecter projet
-                ProjetDmpl p=new ProjetDmpl();
+                /*ProjetDmpl p=new ProjetDmpl();
                 if(p.getProjetByTask(task)!=null) {
                     Projet pp = p.getProjetByTask(task);
                     task.setPROJET(pp);
-                }
+                }*/
 
                 // affecter materiels
-                MaterialDmpl m=new MaterialDmpl();
+                /*MaterialDmpl m=new MaterialDmpl();
                 if(m.getMaterielsByTask(task)!=null) {
                     List<Materiel> ms = m.getMaterielsByTask(task);
                     task.setMATERIEL(ms);
-                }
+                }*/
 
                 // affecter intervenants
-                IntervenantDAO i=new IntervenantDmpl();
+                /*IntervenantDAO i=new IntervenantDmpl();
                 if(i.getIntervenantsByTask(task)!=null) {
                     List<Intervenant> is = i.getIntervenantsByTask(task);
                     task.setINTERVENT(is);
-                }
+                }*/
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByTask(task)!=null) {
                     List<Notification> ns = n.getNotificationByTask(task);
                     task.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter orders_de_travail
-                OrderDeTravailDmpl ord=new OrderDeTravailDmpl();
+                /*OrderDeTravailDmpl ord=new OrderDeTravailDmpl();
                 if(ord.getOrderDeTravailByTask(task)!=null) {
                     List<OrderDeTravail> os = ord.getOrderDeTravailByTask(task);
                     task.setORDERS_DE_TRAVAIL(os);
-                }
+                }*/
             }
         }catch (SQLException e){
             e.printStackTrace();
@@ -250,39 +250,39 @@ public class TaskDmpl implements TaskDAO {
                 task.setTITLE(resultSet.getString("TITLE"));
 
                 // affecter projet
-                ProjetDmpl p=new ProjetDmpl();
+                /*ProjetDmpl p=new ProjetDmpl();
                 if(p.getProjetByTask(task)!=null) {
                     Projet pp = p.getProjetByTask(task);
                     task.setPROJET(pp);
-                }
+                }*/
 
                 // affecter materiels
-                MaterialDmpl m=new MaterialDmpl();
+                /*MaterialDmpl m=new MaterialDmpl();
                 if(m.getMaterielsByTask(task)!=null) {
                     List<Materiel> ms = m.getMaterielsByTask(task);
                     task.setMATERIEL(ms);
-                }
+                }*/
 
                 // affecter intervenants
-                IntervenantDAO i=new IntervenantDmpl();
+                /*IntervenantDAO i=new IntervenantDmpl();
                 if(i.getIntervenantsByTask(task)!=null) {
                     List<Intervenant> is = i.getIntervenantsByTask(task);
                     task.setINTERVENT(is);
-                }
+                }*/
 
                 // affecter notifications
-                NotificationDmpl not=new NotificationDmpl();
+                /*NotificationDmpl not=new NotificationDmpl();
                 if(not.getNotificationByTask(task)!=null) {
                     List<Notification> ns = not.getNotificationByTask(task);
                     task.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter orders_de_travail
-                OrderDeTravailDmpl o=new OrderDeTravailDmpl();
+                /*OrderDeTravailDmpl o=new OrderDeTravailDmpl();
                 if(o.getOrderDeTravailByTask(task)!=null) {
                     List<OrderDeTravail> os = o.getOrderDeTravailByTask(task);
                     task.setORDERS_DE_TRAVAIL(os);
-                }
+                }*/
 
                 tasks.add(task);
             }
@@ -309,39 +309,39 @@ public class TaskDmpl implements TaskDAO {
                 task.setTITLE(resultSet.getString("TITLE"));
 
                 // affecter projet
-                ProjetDmpl p=new ProjetDmpl();
+                /*ProjetDmpl p=new ProjetDmpl();
                 if(p.getProjetByTask(task)!=null) {
                     Projet pp = p.getProjetByTask(task);
                     task.setPROJET(pp);
-                }
+                }*/
 
                 // affecter materiels
-                MaterialDmpl m=new MaterialDmpl();
+                /*MaterialDmpl m=new MaterialDmpl();
                 if(m.getMaterielsByTask(task)!=null) {
                     List<Materiel> ms = m.getMaterielsByTask(task);
                     task.setMATERIEL(ms);
-                }
+                }*/
 
                 // affecter intervenants
-                IntervenantDAO in=new IntervenantDmpl();
+                /*IntervenantDAO in=new IntervenantDmpl();
                 if(in.getIntervenantsByTask(task)!=null) {
                     List<Intervenant> is = in.getIntervenantsByTask(task);
                     task.setINTERVENT(is);
-                }
+                }*/
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByTask(task)!=null) {
                     List<Notification> ns = n.getNotificationByTask(task);
                     task.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter orders_de_travail
-                OrderDeTravailDmpl o=new OrderDeTravailDmpl();
+                /*OrderDeTravailDmpl o=new OrderDeTravailDmpl();
                 if(o.getOrderDeTravailByTask(task)!=null) {
                     List<OrderDeTravail> os = o.getOrderDeTravailByTask(task);
                     task.setORDERS_DE_TRAVAIL(os);
-                }
+                }*/
 
                 tasks.add(task);
             }
@@ -368,39 +368,39 @@ public class TaskDmpl implements TaskDAO {
                 task.setTITLE(resultSet.getString("TITLE"));
 
                 // affecter projet
-                ProjetDmpl pr=new ProjetDmpl();
+                /* ProjetDmpl pr=new ProjetDmpl();
                 if(pr.getProjetByTask(task)!=null) {
                     Projet pp = pr.getProjetByTask(task);
                     task.setPROJET(pp);
-                }
+                } */
 
                 // affecter materiels
-                MaterialDmpl m=new MaterialDmpl();
+                /*MaterialDmpl m=new MaterialDmpl();
                 if(m.getMaterielsByTask(task)!=null) {
                     List<Materiel> ms = m.getMaterielsByTask(task);
                     task.setMATERIEL(ms);
-                }
+                }*/
 
                 // affecter intervenants
-                IntervenantDAO i=new IntervenantDmpl();
+                /*IntervenantDAO i=new IntervenantDmpl();
                 if(i.getIntervenantsByTask(task)!=null) {
                     List<Intervenant> is = i.getIntervenantsByTask(task);
                     task.setINTERVENT(is);
-                }
+                }*/
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByTask(task)!=null) {
                     List<Notification> ns = n.getNotificationByTask(task);
                     task.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter orders_de_travail
-                OrderDeTravailDmpl o=new OrderDeTravailDmpl();
+                /*OrderDeTravailDmpl o=new OrderDeTravailDmpl();
                 if(o.getOrderDeTravailByTask(task)!=null) {
                     List<OrderDeTravail> os = o.getOrderDeTravailByTask(task);
                     task.setORDERS_DE_TRAVAIL(os);
-                }
+                }*/
 
                 tasks.add(task);
             }
@@ -417,7 +417,6 @@ public class TaskDmpl implements TaskDAO {
             Connection connection=new SingletonConnexionDB().getConnexion();
             PreparedStatement statement = connection.prepareStatement("SELECT t.ID,t.DESCRIPTION,t.DATE_DEBUT,t.DATE_FIN,t.TITLE FROM materiel m,task t,affecter_materiel aff where aff.ID_MATERIEL=m.ID and aff.ID_TASK=t.ID and m.ID=?");
             statement.setLong(1,m.getID());
-            System.out.println(statement);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 Task task = new Task();
@@ -428,39 +427,39 @@ public class TaskDmpl implements TaskDAO {
                 task.setTITLE(resultSet.getString("TITLE"));
 
                 // affecter projet
-                ProjetDmpl p=new ProjetDmpl();
+                /*ProjetDmpl p=new ProjetDmpl();
                 if(p.getProjetByTask(task)!=null) {
                     Projet pp = p.getProjetByTask(task);
                     task.setPROJET(pp);
-                }
+                }*/
 
                 // affecter materiels
-                MaterialDmpl mm=new MaterialDmpl();
+                /*MaterialDmpl mm=new MaterialDmpl();
                 if(mm.getMaterielsByTask(task)!=null) {
                     List<Materiel> ms = mm.getMaterielsByTask(task);
                     task.setMATERIEL(ms);
-                }
+                }*/
 
                 // affecter intervenants
-                IntervenantDAO i=new IntervenantDmpl();
+                /*IntervenantDAO i=new IntervenantDmpl();
                 if(i.getIntervenantsByTask(task)!=null) {
                     List<Intervenant> is = i.getIntervenantsByTask(task);
                     task.setINTERVENT(is);
-                }
+                }*/
 
                 // affecter notifications
-                NotificationDmpl n=new NotificationDmpl();
+                /*NotificationDmpl n=new NotificationDmpl();
                 if(n.getNotificationByTask(task)!=null) {
                     List<Notification> ns = n.getNotificationByTask(task);
                     task.setNOTIFICATIONS(ns);
-                }
+                }*/
 
                 // affecter orders_de_travail
-                OrderDeTravailDmpl o=new OrderDeTravailDmpl();
+                /*OrderDeTravailDmpl o=new OrderDeTravailDmpl();
                 if(o.getOrderDeTravailByTask(task)!=null) {
                     List<OrderDeTravail> os = o.getOrderDeTravailByTask(task);
                     task.setORDERS_DE_TRAVAIL(os);
-                }
+                }*/
 
                 tasks.add(task);
             }
