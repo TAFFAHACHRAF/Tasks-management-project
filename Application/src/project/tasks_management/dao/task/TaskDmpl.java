@@ -474,9 +474,9 @@ public class TaskDmpl implements TaskDAO {
     public Materiel affecter_materiel(Task t,Materiel m){
         try {
             Connection connection=new SingletonConnexionDB().getConnexion();
-            PreparedStatement pstm=connection.prepareStatement("insert into affecter_materiel values (?,?)");
-            pstm.setLong(1,m.getID());
-            pstm.setLong(2,t.getID());
+            PreparedStatement pstm=connection.prepareStatement("insert into affecter_materiel values (0,?,?)");
+            pstm.setLong(1,t.getID());
+            pstm.setLong(2,m.getID());
             pstm.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();
@@ -488,9 +488,9 @@ public class TaskDmpl implements TaskDAO {
     public Intervenant affecter_intervenant(Task t,Intervenant i){
         try {
             Connection connection=new SingletonConnexionDB().getConnexion();
-            PreparedStatement pstm=connection.prepareStatement("insert into affecter_intervenant values (?,?)");
-            pstm.setLong(1,i.getID());
-            pstm.setLong(2,t.getID());
+            PreparedStatement pstm=connection.prepareStatement("insert into affecter_intervenant values (0,?,?)");
+            pstm.setLong(1,t.getID());
+            pstm.setLong(2,i.getID());
             pstm.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();
@@ -502,7 +502,7 @@ public class TaskDmpl implements TaskDAO {
     public boolean delete_affectation_materiel(Task t,Materiel m){
         try {
             Connection connection=new SingletonConnexionDB().getConnexion();
-            PreparedStatement pstm=connection.prepareStatement("delete from affecter_materiel where ID_TASK=? and ID_MATERIEL=?");
+            PreparedStatement pstm=connection.prepareStatement("delete from affecter_materiel where TASK_ID=? and MATERIEL_ID=?");
             pstm.setLong(1,t.getID());
             pstm.setLong(2,m.getID());
             pstm.executeUpdate();
@@ -516,7 +516,7 @@ public class TaskDmpl implements TaskDAO {
     public boolean delete_affectation_intervenant(Task t,Intervenant i){
         try {
             Connection connection=new SingletonConnexionDB().getConnexion();
-            PreparedStatement pstm=connection.prepareStatement("delete from affecter_intervenant where ID_TASK=? and ID_INTERVENANT=?");
+            PreparedStatement pstm=connection.prepareStatement("delete from affecter_intervenant where TASK_ID=? and INTERVENANT_ID=?");
             pstm.setLong(1,t.getID());
             pstm.setLong(2,i.getID());
             pstm.executeUpdate();

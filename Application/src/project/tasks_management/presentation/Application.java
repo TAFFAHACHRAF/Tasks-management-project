@@ -45,11 +45,15 @@ public class Application
         inter1.ajouterIntervenant(i);
         inter1.ajouterIntervenant(i);
 
-        Materiel m=new Materiel(110,"rofj","rifj");
+        /*Materiel m=new Materiel(110,"rofj","rifj");
         m.setRESPONSABLE(resp1.retournerResponsables().get(0));
-        mat1.ajouterMateriel(m);
+        mat1.ajouterMateriel(m);*/
 
         /*t1.affecter_intervenant(t1.retournerTasks().get(0),inter1.retournerIntervenants().get(1));
         t1.affecter_materiel(t1.retournerTasks().get(0),mat1.retournerMateriels().get(1));*/
+
+        t1.affecter_materiel(t1.retournerTasks().get(0),mat1.retournerMateriels().get(0));
+        t1.affecter_intervenant(t1.retournerTasks().get(0),inter1.retournerIntervenants().get(0));
+        t1.supprimer_affectation_intervenant(t1.retournerTasks().get(0),inter1.retournerIntervenants().get(0));
     }
 }
