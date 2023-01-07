@@ -25,43 +25,7 @@ L’objectif de ce projet est le développement d’une application en JAVA pour
     
 ### La structure du projet
  ``` bash
-├───.idea
-├───out
-│   └───production
-│       └───JAVA FX
-│           └───project
-│               └───tasks_management
-│                   ├───dao
-│                   │   ├───intervenant
-│                   │   ├───materiel
-│                   │   ├───notification
-│                   │   ├───order_de_travail
-│                   │   ├───projet
-│                   │   ├───responsable
-│                   │   └───task
-│                   ├───entities
-│                   └───presentation
-└───src
-    └───project
-        └───tasks_management
-            ├───dao
-            │   ├───intervenant
-            │   ├───materiel
-            │   ├───notification
-            │   ├───order_de_travail
-            │   ├───projet
-            │   ├───responsable
-            │   └───task
-            ├───entities
-            ├───presentation
-            └───services
-                ├───intervenant
-                ├───materiel
-                ├───notification
-                ├───order_de_travail
-                ├───projet
-                ├───responsable
-                └───task
+   tree
 ```
 
 
