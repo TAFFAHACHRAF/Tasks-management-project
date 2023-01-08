@@ -25,54 +25,95 @@ L’objectif de ce projet est le développement d’une application en JAVA pour
     
 ### La structure du projet
  ``` bash
-   C:.
-├───.idea
-├───out
-│   └───production
-│       └───JAVA FX
-│           └───project
-│               └───tasks_management
-│                   ├───dao
-│                   │   ├───intervenant
-│                   │   ├───materiel
-│                   │   ├───notification
-│                   │   ├───order_de_travail
-│                   │   ├───projet
-│                   │   ├───responsable
-│                   │   └───task
-│                   ├───entities
-│                   ├───presentation
-│                   └───services
-│                       ├───intervenant
-│                       ├───materiel
-│                       ├───notification
-│                       ├───order_de_travail
-│                       ├───projet
-│                       ├───responsable
-│                       └───task
-└───src
-    └───project
-        └───tasks_management
-            ├───dao
-            │   ├───intervenant
-            │   ├───materiel
-            │   ├───notification
-            │   ├───order_de_travail
-            │   ├───projet
-            │   ├───responsable
-            │   └───task
-            ├───entities
-            ├───presentation
-            │   ├───controllers
-            │   └───view
-            └───services
-                ├───intervenant
-                ├───materiel
-                ├───notification
-                ├───order_de_travail
-                ├───projet
-                ├───responsable
-                └───task
+.
+├── Application
+│   ├── Database
+│   │   └── tasks-management.sql
+│   ├── JAVA FX.iml
+│   ├── mysql-connector-java-8.0.30.jar
+│   ├── out
+│   │   └── production
+│   │       └── JAVA FX
+│   │           ├── enset
+│   │           │   └── ma
+│   │           │       └── jdbc
+│   │           │           ├── dao
+│   │           │           │   ├── Dao.class
+│   │           │           │   ├── entities
+│   │           │           │   │   └── Produit.class
+│   │           │           │   ├── ProduitDaoImpl.class
+│   │           │           │   └── SingletonConnexionDB.class
+│   │           │           ├── presentation
+│   │           │           │   └── Main.class
+│   │           │           └── services
+│   │           │               ├── ProduitServices.class
+│   │           │               └── ProduitsServicesImpl.class
+│   │           └── project
+│   │               └── tasks_management
+│   │                   ├── dao
+│   │                   │   ├── CompteImpl.class
+│   │                   │   ├── CompteInterface.class
+│   │                   │   ├── Dao.class
+│   │                   │   ├── entities
+│   │                   │   │   ├── Compte.class
+│   │                   │   │   ├── Diagramme.class
+│   │                   │   │   ├── Intervenent.class
+│   │                   │   │   ├── Materiel.class
+│   │                   │   │   ├── Notification.class
+│   │                   │   │   ├── OrderDeTravail.class
+│   │                   │   │   ├── Projet.class
+│   │                   │   │   ├── Responsable.class
+│   │                   │   │   ├── Task.class
+│   │                   │   │   └── User.class
+│   │                   │   ├── IntervenentImpl.class
+│   │                   │   ├── IntervenentInterface.class
+│   │                   │   ├── SingletonConnexionDB.class
+│   │                   │   └── Test.class
+│   │                   └── presentation
+│   │                       └── Main.class
+│   ├── src
+│   │   └── project
+│   │       └── tasks_management
+│   │           ├── dao
+│   │           │   ├── abdelmalek
+│   │           │   │   ├── MaterialDAO.java
+│   │           │   │   ├── materialDmpl.java
+│   │           │   │   ├── ProjetDAO.java
+│   │           │   │   ├── ProjetDmpl.java
+│   │           │   │   ├── TaskDAO.java
+│   │           │   │   ├── TaskDmpl.java
+│   │           │   │   ├── UserDAO.java
+│   │           │   │   └── UserDmpl.java
+│   │           │   ├── CompteImpl.java
+│   │           │   ├── CompteInterface.java
+│   │           │   ├── Dao.java
+│   │           │   ├── entities
+│   │           │   │   ├── Compte.java
+│   │           │   │   ├── Diagramme.java
+│   │           │   │   ├── Intervenent.java
+│   │           │   │   ├── Materiel.java
+│   │           │   │   ├── Notification.java
+│   │           │   │   ├── OrderDeTravail.java
+│   │           │   │   ├── Projet.java
+│   │           │   │   ├── Responsable.java
+│   │           │   │   ├── Task.java
+│   │           │   │   └── User.java
+│   │           │   ├── IntervenentImpl.java
+│   │           │   ├── IntervenentInterface.java
+│   │           │   ├── SingletonConnexionDB.java
+│   │           │   └── Test.java
+│   │           └── presentation
+│   │               └── Main.java
+│   └── tasks-management.sql
+├── Conception
+│   └── UML
+│       ├── Diagramme de cas d'utilisation.pdf
+│       └── Diagramme de contexte.pdf
+├── Planning
+│   └── java-reunion-1.txt
+├── README.md
+└── Specifications
+    └── Specifications.pdf
 ```
 
 
