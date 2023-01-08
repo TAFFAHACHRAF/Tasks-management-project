@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.tasks_management.presentation.Controllers.ProfileController">
+   <left>
+      <AnchorPane prefHeight="400.0" prefWidth="149.0" style="-fx-background-color: #333;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="32.0" fitWidth="33.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logoPeojet.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="22.0" text="Java Project" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <VBox layoutX="-3.0" layoutY="70.0" prefHeight="200.0" prefWidth="151.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0Px 0Px 1PX 0PX;" text="Home" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0Px 0Px 1PX 0PX;" text="My Tasks" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0PX 0PX 1PX 0PX;" text="Charts" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0PX 0PX 1PX 0PX;" text="Profile" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="171.0" style="-fx-background-color: #333; -fx-border-color: #FFF; -fx-border-width: 0PX 0PX 1PX 0PX;" text="LogOut" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <effect>
+                        <BoxBlur iterations="0" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="27.0" layoutY="28.0" style="-fx-font-weight: 700;" text="profile">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="219.0" layoutY="113.0" text="Nom : ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="modifierProfileBtn" onAction="#getModifierProfilePage" layoutX="317.0" layoutY="23.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="117.0" style="-fx-background-color: #333; -fx-font-weight: 700;" text="Modifier profile" textFill="WHITE" />
+            <Label layoutX="217.0" layoutY="150.0" text="prenom : ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="106.0" fitWidth="120.0" layoutX="52.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/user.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="218.0" layoutY="190.0" text="Email : ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="220.0" layoutY="231.0" text="Post : ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="280.0" layoutY="113.0" text="John" />
+            <Label layoutX="226.0" layoutY="140.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="149.0" text="Doe" />
+            <Label layoutX="282.0" layoutY="191.0" prefHeight="17.0" prefWidth="113.0" text="jhon@gmail.com" />
+            <Label layoutX="276.0" layoutY="231.0" prefHeight="17.0" prefWidth="113.0" text="Post 1" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
