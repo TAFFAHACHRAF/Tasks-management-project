@@ -23,6 +23,8 @@ L’objectif de ce projet est le développement d’une application en JAVA pour
     4) Recevoir une notification (Email et SMS).
     
     
+### Design
+![alt text](macbook-pro-mockup.png)
 ### La structure du projet
  ``` bash
 28 directories, 60 files
