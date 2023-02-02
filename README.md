@@ -35,46 +35,6 @@ L’objectif de ce projet est le développement d’une application en JAVA pour
 │   │   └── tasks-management.sql
 │   ├── JAVA FX.iml
 │   ├── mysql-connector-java-8.0.30.jar
-│   ├── out
-│   │   └── production
-│   │       └── JAVA FX
-│   │           ├── enset
-│   │           │   └── ma
-│   │           │       └── jdbc
-│   │           │           ├── dao
-│   │           │           │   ├── Dao.class
-│   │           │           │   ├── entities
-│   │           │           │   │   └── Produit.class
-│   │           │           │   ├── ProduitDaoImpl.class
-│   │           │           │   └── SingletonConnexionDB.class
-│   │           │           ├── presentation
-│   │           │           │   └── Main.class
-│   │           │           └── services
-│   │           │               ├── ProduitServices.class
-│   │           │               └── ProduitsServicesImpl.class
-│   │           └── project
-│   │               └── tasks_management
-│   │                   ├── dao
-│   │                   │   ├── CompteImpl.class
-│   │                   │   ├── CompteInterface.class
-│   │                   │   ├── Dao.class
-│   │                   │   ├── entities
-│   │                   │   │   ├── Compte.class
-│   │                   │   │   ├── Diagramme.class
-│   │                   │   │   ├── Intervenent.class
-│   │                   │   │   ├── Materiel.class
-│   │                   │   │   ├── Notification.class
-│   │                   │   │   ├── OrderDeTravail.class
-│   │                   │   │   ├── Projet.class
-│   │                   │   │   ├── Responsable.class
-│   │                   │   │   ├── Task.class
-│   │                   │   │   └── User.class
-│   │                   │   ├── IntervenentImpl.class
-│   │                   │   ├── IntervenentInterface.class
-│   │                   │   ├── SingletonConnexionDB.class
-│   │                   │   └── Test.class
-│   │                   └── presentation
-│   │                       └── Main.class
 │   ├── src
 │   │   └── project
 │   │       └── tasks_management
